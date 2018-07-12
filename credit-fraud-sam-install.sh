@@ -666,8 +666,8 @@ echo "********************************* Create Storm View"
 createStormView
 echo "********************************* Registering Schemas"
 pushSchemasToRegistry
-echo "********************************* Deploying UI and HTTP Pub/Sub containers"
-deployContainers $ROOT_PATH/CreditCardTransactionMonitor/TransactionMonitorUI	
+#echo "********************************* Deploying UI and HTTP Pub/Sub containers"
+#deployContainers $ROOT_PATH/CreditCardTransactionMonitor/TransactionMonitorUI	
 echo "********************************* Deploying Nifi Template"
 deployTemplateToNifi $ROOT_PATH/CreditCardTransactionMonitor/Nifi/template/credit-fraud.xml Credit-Fraud-Demo
 echo "********************************* Configuring Nifi Template"
@@ -676,8 +676,8 @@ echo "********************************* Creating SAM Service Pool"
 createSAMCluster
 echo "********************************* Initializing SAM Namespace"
 initializeSAMNamespace
-echo "********************************* Uploading SAM Extensions"
-uploadSAMExtensions
+#echo "********************************* Uploading SAM Extensions"
+#uploadSAMExtensions
 echo "********************************* Import PMML Model to SAM"
 importPMMLModel $ROOT_PATH/CreditCardTransactionMonitor/Model credit-fraud.xml credit-fraud
 echo "********************************* Import SAM Template"
